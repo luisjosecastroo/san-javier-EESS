@@ -1,0 +1,75 @@
+Compilación correcta: EstacionSanJavier.jar
+PASS cliente sin NIT
+PASS cliente sin razón social
+PASS el cliente normaliza espacios exteriores
+PASS venta con cero litros
+PASS venta negativa
+PASS venta con precio cero
+PASS venta sin placa
+PASS litros que redondean a cero
+PASS total decimal exacto redondeado a centavos
+PASS normalización de placa
+PASS polimorfismo: la venta resta stock
+PASS polimorfismo: la recepción suma stock
+PASS tanque no admite sobrecapacidad
+PASS rechazo de recepción conserva stock
+PASS tanque no admite sobregiro
+PASS rechazo de venta conserva stock
+PASS consulta de Ventas
+PASS consulta de Tanques
+PASS consulta de Recepciones
+PASS consulta de Clientes
+PASS consulta de Personal
+PASS consulta de Turnos
+PASS consulta de Asignaciones
+PASS consulta de Combustibles
+PASS consulta de Precios
+PASS consulta de Islas
+PASS consulta de Mangueras
+PASS inicialización idempotente
+PASS selector de clientes
+PASS selector de administradores
+PASS selector de despachadores
+PASS selector de tanques
+PASS selector de combustibles
+PASS selector de islas
+PASS selector de mangueras
+PASS selector de turnos
+PASS selector de asignaciones
+PASS resumen tiene cuatro indicadores
+PASS texto con SQL se almacena como dato
+PASS NIT duplicado
+PASS duplicado no aumenta registros
+PASS venta descuenta una sola vez
+PASS venta guarda el total correcto
+PASS factura duplicada
+PASS cliente inexistente revierte la transacción
+PASS venta sobre el stock
+PASS ventas rechazadas conservan stock
+PASS ventas rechazadas no se insertan
+PASS recepción suma una sola vez
+PASS despachador no puede recibir como administrador
+PASS recepción supera capacidad
+PASS recepciones rechazadas no se insertan
+PASS recepciones rechazadas conservan stock
+PASS formulario con precio antiguo se rechaza
+PASS historial conserva el precio anterior
+PASS solo un precio queda abierto
+PASS turno con asignaciones abiertas no cierra
+PASS lectura que no concilia se rechaza
+PASS rechazo mantiene asignación abierta
+PASS asignación cerrada no admite venta
+PASS no se cierra dos veces una asignación
+PASS cierre calcula la recaudación desde ventas
+PASS no se cierra dos veces un turno
+PASS lectura inicial no puede retroceder
+PASS manguera no se asigna simultáneamente a dos turnos
+PASS despachador inactivo no vende
+PASS despachador inactivo no aparece en selector
+PASS nuevo tanque nace vacío
+PASS catálogos guardan relaciones
+PASS demás catálogos siguen disponibles
+PASS ventas concurrentes no sobregiran stock
+PASS stock consistente después de concurrencia
+PASS solo una venta concurrente se guarda
+RESULTADO: 73 comprobaciones aprobadas.

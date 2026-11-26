@@ -1,0 +1,8 @@
+out/
+out-test/
+datos/
+config-local.properties
+*.log
+.DS_Store
+*.app/
+package-input/

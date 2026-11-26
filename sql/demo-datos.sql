@@ -1,0 +1,20 @@
+-- Datos ficticios de práctica. Los precios son ejemplos, no tarifas vigentes.
+INSERT INTO personal(ci,nombres,apellidos,cargo,telefono) VALUES ('DEMO-ADM','Ana','Demostración','Administrador','');
+INSERT INTO personal(ci,nombres,apellidos,cargo,telefono) VALUES ('DEMO-DES','Carlos','Demostración','Despachador','');
+INSERT INTO tipo_combustible(nombre) VALUES ('Gasolina Especial'),('Diésel'),('Gasolina Premium');
+INSERT INTO historial_precio(id_combustible,precio_litro,resolucion_anh) VALUES (1,3.74,'EJEMPLO ACADÉMICO'),(2,3.72,'EJEMPLO ACADÉMICO'),(3,6.00,'EJEMPLO ACADÉMICO');
+INSERT INTO tanque(codigo_tanque,capacidad_maxima_litros,id_combustible) VALUES ('T-01',20000,1),('T-02',20000,2),('T-03',10000,3);
+INSERT INTO isla(numero_isla,descripcion) VALUES (1,'Isla principal'),(2,'Isla auxiliar');
+INSERT INTO manguera(codigo_manguera,lado,id_isla,id_tanque) VALUES ('M-01','A',1,1),('M-02','B',1,2),('M-03','A',2,3);
+INSERT INTO cliente(nit_ci,razon_social) VALUES ('DEMO-001','Cliente de demostración'),('DEMO-002','Transporte de práctica'),('DEMO-003','Cliente particular');
+INSERT INTO turno(fecha,franja,id_administrador) VALUES (CURRENT_DATE,'Mañana',1);
+INSERT INTO asignacion_turno_manguera(id_turno,id_despachador,id_manguera,lectura_inicial) VALUES (1,2,1,1000),(1,2,2,2000),(1,2,3,500);
+INSERT INTO recepcion_cisterna(nro_guia_remision,litros_recibidos,id_tanque,id_administrador) VALUES ('GUIA-DEMO-01',12000,1,1),('GUIA-DEMO-02',8000,2,1),('GUIA-DEMO-03',1500,3,1);
+UPDATE tanque SET stock_actual_litros=12000 WHERE id_tanque=1;
+UPDATE tanque SET stock_actual_litros=8000 WHERE id_tanque=2;
+UPDATE tanque SET stock_actual_litros=1500 WHERE id_tanque=3;
+INSERT INTO venta(nro_factura,placa_vehiculo,litros_vendidos,precio_unitario_aplicado,monto_total,metodo_pago,id_cliente,id_asignacion) VALUES ('DEMO-001','ABC-DEMO',30,3.74,112.20,'Efectivo',1,1),('DEMO-002','DEF-DEMO',80,3.72,297.60,'QR',2,2),('DEMO-003','GHI-DEMO',20,6.00,120.00,'Tarjeta',3,3);
+UPDATE tanque SET stock_actual_litros=11970 WHERE id_tanque=1;
+UPDATE tanque SET stock_actual_litros=7920 WHERE id_tanque=2;
+UPDATE tanque SET stock_actual_litros=1480 WHERE id_tanque=3;
+INSERT INTO eess_demo_version(version) VALUES (1);
